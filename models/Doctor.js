@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");  
 const DoctorSchema = new mongoose.Schema({
   user: { 
     type: mongoose.Schema.Types.ObjectId, 
@@ -48,9 +49,7 @@ const DoctorSchema = new mongoose.Schema({
       default: Date.now 
     }
   }],
-  profileImage: { 
-    type: String 
-  },
+  
   averageRating: { 
     type: Number, 
     default: 0 
@@ -64,3 +63,5 @@ const DoctorSchema = new mongoose.Schema({
   phone: String 
   
 });
+const Doctor = mongoose.model("Doctor", DoctorSchema);
+module.exports = Doctor;

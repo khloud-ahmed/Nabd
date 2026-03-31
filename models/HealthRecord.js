@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const HealthRecordSchema = new mongoose.Schema({
   patient: { 
     type: mongoose.Schema.Types.ObjectId, 

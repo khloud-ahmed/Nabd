@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");  
 const PatientSchema = new mongoose.Schema({
   user: { 
     type: mongoose.Schema.Types.ObjectId, 
@@ -20,3 +21,5 @@ const PatientSchema = new mongoose.Schema({
   }
   
 });
+const Patient = mongoose.model("Patient", PatientSchema);
+module.exports = Patient;

@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");  
 const PrescriptionSchema = new mongoose.Schema({
   appointment: { 
     type: mongoose.Schema.Types.ObjectId, 
